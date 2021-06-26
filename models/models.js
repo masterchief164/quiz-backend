@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const contestSchema = mongoose.Schema({
     name: String,
     duration: Number,
-    date: Date,
+    date: String,
     time: String,
     organizer: String,
     questions:[{

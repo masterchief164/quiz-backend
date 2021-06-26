@@ -3,10 +3,13 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const express = require("express")
 const app = express();
+const contestRouter = require("./routers/router")
 
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 app.use(cors());
+app.use("/api", contestRouter);
+
 
 mongoose.connect(process.env.URL, {
     useNewUrlParser: true,
