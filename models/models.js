@@ -6,14 +6,12 @@ const contestSchema = mongoose.Schema({
     date: String,
     time: String,
     organizer: String,
-    questions:[{
+    questions: [{
         desc: String,
-        options:[{
-            opt1:String,
-            opt2:String,
-            opt3:String,
-            opt4:String
-        }],
+        opt1: String,
+        opt2: String,
+        opt3: String,
+        opt4: String,
         correctOpt: Number
     }],
     createdAt: {
@@ -22,6 +20,6 @@ const contestSchema = mongoose.Schema({
     }
 });
 
-const contest = mongoose.model("Contest",contestSchema);
+const contest = mongoose.model("Contest", contestSchema);
 
-module.exports= contest;
+module.exports = contest;
