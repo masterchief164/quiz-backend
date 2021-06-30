@@ -102,9 +102,9 @@ const loginParticipant = async (req,res)=>{
             if(participant)
             {
                 if(participant.password ===pass)
-                    res.status(200).json({found:true,correct:true})
+                    res.status(200).json({found:true,correct:true,participant:participant})
                 else
-                    res.status(200).json({found:true,correct:false})
+                    res.status(400).json({found:true,correct:false})
             }
             else{
                 res.status(404).json({found:false,correct:false})
