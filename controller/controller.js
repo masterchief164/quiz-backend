@@ -95,6 +95,8 @@ const getParticipants = async (req, res) => {
 const loginParticipant = async (req,res)=>{
     const uName = req.body.username;
     const pass = req.body.password;
+    console.log(uName);
+    console.log(pass);
     Participant.findOne({username:uName},function (err, participant) {
         if(err)
             console.log(err);
